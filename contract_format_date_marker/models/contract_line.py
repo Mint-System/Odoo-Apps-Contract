@@ -1,5 +1,7 @@
 from odoo import fields, models, api, _
 import locale
+import logging
+_logger = logging.getLogger(__name__)
 
 
 class ContractLine(models.Model):
@@ -11,10 +13,11 @@ class ContractLine(models.Model):
 
         if first_date_invoiced and last_date_invoiced:
             lang_obj = self.env["res.lang"]
-            lang = lang_obj.search([("code", "=", self.contract_id.partner_id.lang)])
-            locale.setlocale(locale.LC_TIME, lang + '.utf8')
-
-            date_format = "%B %Y"
+            lang = lang_obj.search([("code", "=", self.contract_id.partner_id.lang)], limit=1)
+            if lang.code:
+                locale.setlocale(locale.LC_TIME, lang.code + '.utf8')
+                        
+            date_format = '%B %Y'
             res += "\n"
             res += first_date_invoiced.strftime(date_format) + " - " + last_date_invoiced.strftime(date_format)
             
