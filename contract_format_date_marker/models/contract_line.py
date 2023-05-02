@@ -16,7 +16,11 @@ class ContractLine(models.Model):
             lang_obj = self.env["res.lang"]
             lang = lang_obj.search([("code", "=", self.contract_id.partner_id.lang)], limit=1)
             if lang.code:
-                locale.setlocale(locale.LC_TIME, lang.code + '.utf8')
+                try:
+                    locale.setlocale(locale.LC_TIME, lang.code + '.utf8')
+                except locale.Error:
+                    continue
+                
                         
             date_format = '%B %Y'
             name += "\n"
