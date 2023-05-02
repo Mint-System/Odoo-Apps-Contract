@@ -19,7 +19,7 @@ class ContractLine(models.Model):
                 try:
                     locale.setlocale(locale.LC_TIME, lang.code + '.utf8')
                 except locale.Error:
-                    continue
+                    pass
                 
                         
             date_format = '%B %Y'
