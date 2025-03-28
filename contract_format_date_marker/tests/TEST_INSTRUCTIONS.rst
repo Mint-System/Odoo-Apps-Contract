@@ -1,0 +1,5 @@
+- Create a customer contract for "Deco Addict"
+- Add a random product
+- Create an invoice
+- Open the invoice
+- Check if the date marker is localized
