@@ -1,0 +1,1 @@
+Apply default cash rounding when create invoice from contract.
