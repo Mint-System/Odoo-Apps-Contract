@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Inherit the subscription form view -->
+    <record id="view_sale_subscription_form_inherit" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="subscription_oca.sale_subscription_form"/> 
+        <field name="arch" type="xml">
+
+            <!-- Replace the existing sale_subscription_line_ids field with section_and_note_one2many -->
+            <xpath expr="//field[@name='sale_subscription_line_ids']" position="replace">
+                <field name="sale_subscription_line_ids" widget="section_and_note_one2many" mode="tree,kanban" readonly="state == 'cancel' or locked">
+                    <!-- Form view for editing lines -->
+                    <form>
+                        <!-- Required for section_and_note_one2many to work -->
+                        <field name="display_type" invisible="1"/>
+                        <field name="sequence" invisible="1"/>
+                        <field name="product_uom_category_id" invisible="1"/>
+
+                        <!-- Main group -->
+                        <group>
+                            <!-- Product fields (visible only if not section/note) -->
+                            <group invisible="display_type">
+                                <field name="product_id" required="True" domain="[('sale_ok', '=', True)]" context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'company_id': parent.company_id}" readonly="not product_updatable" force_save="1" widget="many2one_barcode"/>
+                                <field name="product_type" invisible="1"/>
+                                <field name="invoice_status" invisible="1"/>
+                                <field name="qty_to_invoice" invisible="1"/>
+                                <field name="qty_delivered_method" invisible="1"/>
+                                <field name="price_total" invisible="1"/>
+                                <field name="price_tax" invisible="1"/>
+                                <field name="price_subtotal" invisible="1"/>
+                                <field name="product_uom_readonly" invisible="1"/>
+                                <label for="product_uom_qty"/>
+                                <div class="o_row" name="ordered_qty">
+                                    <field context="{'partner_id':parent.partner_id, 'quantity':product_uom_qty, 'pricelist':parent.pricelist_id, 'uom':product_uom, 'uom_qty_change':True, 'company_id': parent.company_id}" name="product_uom_qty"/>
+                                    <field name="product_uom" invisible="1" groups="!uom.group_uom"/>
+                                    <field name="product_uom" force_save="1" groups="uom.group_uom" class="oe_no_button" readonly="product_uom_readonly" required="not display_type"/>
+                                </div>
+                                <field name="price_unit" required="True"/>
+                                <field name="tax_ids" widget="many2many_tags" options="{'no_create': True}" context="{'search_view_ref': 'account.account_tax_view_search'}" domain="[('type_tax_use', '=', 'sale'), ('company_id', 'parent_of', parent.company_id), ('country_id', '=', parent.tax_country_id)]" readonly="qty_invoiced &gt; 0"/>
+                                <t groups="product.group_discount_per_so_line">
+                                    <label for="discount"/>
+                                    <div name="discount">
+                                        <field name="discount" class="oe_inline"/> %
+                                    </div>
+                                </t>
+                                <field name="sequence" invisible="1"/> <!-- Required for correct line ordering -->
+                            </group>
+
+                            <!-- Section/Note fields (visible only if section/note) -->
+                            <group invisible="not display_type">
+                                <label for="name" string="Section Name (eg. Products, Services)" invisible="display_type != 'line_section'"/>
+                                <label for="name" string="Note" invisible="display_type != 'line_note'"/>
+                                <field name="name" required="True" widget="section_and_note_text"/>
+                            </group>
+                        </group>
+
+                        <!-- Description field (visible only if not section) -->
+                        <label for="name" string="Description" invisible="display_type"/>
+                        <field name="name" invisible="display_type" required="True" widget="section_and_note_text"/>
+
+                        <!-- Hidden fields -->
+                        <field name="state" invisible="1"/>
+                        <field name="company_id" invisible="1"/>
+                    </form>
+                </field>
+            </xpath>
+
+            <!-- Also inherit the total group if needed -->
+            <xpath expr="//group[@name='subscription_total']" position="after">
+                <!-- Optional: Add any additional fields or logic -->
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
