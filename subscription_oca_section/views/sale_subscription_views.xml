@@ -8,15 +8,11 @@
         <field name="inherit_id" ref="subscription_oca.sale_subscription_form"/> 
         <field name="arch" type="xml">
 
-            <!-- Replace the existing sale_subscription_line_ids field with section_and_note_one2many -->
             <xpath expr="//field[@name='sale_subscription_line_ids']" position="replace">
                 <field name="sale_subscription_line_ids" widget="section_and_note_one2many" mode="tree,kanban" readonly="state == 'cancel' or locked">
-                    <!-- Form view for editing lines -->
                     <form>
-                        <!-- Required for section_and_note_one2many to work -->
                         <field name="display_type" invisible="1"/>
                         <field name="sequence" invisible="1"/>
-                        <field name="product_uom_category_id" invisible="1"/>
 
                         <!-- Main group -->
                         <group>

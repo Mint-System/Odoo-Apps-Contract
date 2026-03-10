@@ -12,7 +12,7 @@
     "license": "AGPL-3",
     "depends": ["subscription_oca"],
     "data": [
-       "views/subscription_oca.sale_subscription_form.xml",
+       "views/sale_subscription_views.xml",
     ],
     "installable": True,
     "application": False,
