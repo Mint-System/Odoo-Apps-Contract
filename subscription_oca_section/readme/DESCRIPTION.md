@@ -1,1 +1,1 @@
-$MODULE_SUMMARY
+Add notes and section to subscription line table.
