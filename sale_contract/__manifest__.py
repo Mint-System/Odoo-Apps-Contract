@@ -12,7 +12,8 @@
     "license": "AGPL-3",
     "depends": ["sale_start_end_dates", "sale_substate", "sale_order_type"],
     "data": [
-        # "views/sale_order.xml"
+        "data/sale_order_type.xml",
+        "views/sale_order.xml",
     ],
     "installable": True,
     "application": False,

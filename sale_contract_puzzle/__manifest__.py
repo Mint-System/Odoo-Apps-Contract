@@ -10,9 +10,10 @@
     "development_status": "Production/Stable",
     "version": "18.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["sale_contract", "fs_folder_webdav"],
+    "depends": ["sale_contract", "fs_folder_webdav", "fs_file"],
     "data": [
-        # "views/sale_order.xml",
+        "data/fs_storage.xml",
+        "views/sale_order.xml",
     ],
     "installable": True,
     "application": False,

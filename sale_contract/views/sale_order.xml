@@ -5,6 +5,50 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
+            <div name="button_box" position="inside">
+                <button
+                    name="action_view_child_contracts"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-files-o"
+                    invisible="child_contract_count == 0"
+                >
+                    <field
+                        name="child_contract_count"
+                        widget="statinfo"
+                        string="Child Contracts"
+                    />
+                </button>
+            </div>
+            <field name="type_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="default_start_date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="default_end_date" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <page name="other_information" position="before">
+                <page string="Contract" name="contract">
+                    <group>
+                        <field name="parent_contract_id" />
+                        <field
+                            name="type_id"
+                            required="order_type_required"
+                            readonly="state in ['sale', 'cancel'] or locked"
+                        />
+                        <field
+                            name="default_start_date"
+                            readonly="state == 'cancel' or locked"
+                        />
+                        <field
+                            name="default_end_date"
+                            readonly="state == 'cancel' or locked"
+                        />
+                    </group>
+                </page>
+            </page>
         </field>
     </record>
 </odoo>

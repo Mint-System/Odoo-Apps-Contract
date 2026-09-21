@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_type_framework_agreement" model="sale.order.type">
+        <field name="name">Framework Agreement</field>
+    </record>
+    <record id="sale_order_type_individual_contract" model="sale.order.type">
+        <field name="name">Individual Contract</field>
+    </record>
+</odoo>

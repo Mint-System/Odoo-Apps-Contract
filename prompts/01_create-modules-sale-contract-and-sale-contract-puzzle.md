@@ -1,8 +1,8 @@
 ---
 title: "Create Modules Sale Contract and Sale Contract Puzzle"
-state: draft
-date_completed: YYYY-MM-DD
-model:
+state: completed
+date_completed: 2026-09-21
+model: infomaniak/moonshotai/Kimi-K2.6
 input_tokens:
 ---
 
@@ -60,6 +60,18 @@ Show this field in the `contracts` tab.
 
 ## Worklog
 
-@Clanker Add a summary here once the task has been completed.
-
-@Clanker Set frontmatter state to completed and update date and model.
+- Added `parent_contract_id` and `child_contract_ids` fields to `sale.order` model in
+  `sale_contract` module.
+- Extended `sale.order` form view in `sale_contract` to add:
+  - A smart button for child contracts (`action_view_child_contracts`).
+  - A new "Contract" tab.
+  - Moved `type_id`, `default_start_date`, and `default_end_date` to the "Contract" tab
+    (original fields are hidden).
+- Created `data/sale_order_type.xml` with "Framework Agreement" and "Individual
+  Contract".
+- In `sale_contract_puzzle`:
+  - Created `data/fs_storage.xml` with a Nextcloud `fs.storage` entry (`noupdate="1"`).
+  - Added `file_contract_id` (FSFile) to `sale.order`.
+  - Extended `sale.order` form view to display `file_contract_id` in the "Contract" tab.
+- Validated Python and XML syntax.
+- Updated prompt frontmatter state to `completed`.

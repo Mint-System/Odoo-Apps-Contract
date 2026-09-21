@@ -5,6 +5,9 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale_contract.view_order_form"/>
         <field name="arch" type="xml">
+            <field name="parent_contract_id" position="after">
+                <field name="file_contract_id" widget="fs_file" />
+            </field>
         </field>
     </record>
 </odoo>
