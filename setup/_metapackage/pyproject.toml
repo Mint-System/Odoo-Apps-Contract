@@ -1,0 +1,12 @@
+[project]
+name = "odoo-apps-contract"
+version = "18.0.20260921.0"
+dependencies = [
+    "odoo-addon-sale_contract==18.0.*",
+    "odoo-addon-sale_contract_puzzle==18.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 18.0",
+]

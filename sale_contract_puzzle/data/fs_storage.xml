@@ -4,8 +4,8 @@
         <field name="name">Nextcloud</field>
         <field name="code">nextcloud</field>
         <field name="protocol">webdav</field>
-        <field name="directory_path">/remote.php/dav/files/admin/Odoo</field>
-        <field name="options">{"base_url": "https://cloud.example.com", "auth": ["username", "password"]}</field>
+        <field name="directory_path">Odoo</field>
+        <field name="options">{"base_url": "https://cloud.example.com/remote.php/dav/files/admin/", "auth": ["username", "password"]}</field>
         <field name="field_xmlids">sale_contract_puzzle.field_sale_order__file_contract_id</field>
     </record>
 </odoo>

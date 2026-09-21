@@ -74,4 +74,14 @@ Show this field in the `contracts` tab.
   - Added `file_contract_id` (FSFile) to `sale.order`.
   - Extended `sale.order` form view to display `file_contract_id` in the "Contract" tab.
 - Validated Python and XML syntax.
+- Added missing `fs_file` dependency to `sale_contract_puzzle` manifest so the `fs_file`
+  widget loads.
+- Replaced placeholder `directory_path`/`options` in `data/fs_storage.xml` and added
+  `field_xmlids` mapping to route `file_contract_id` attachments to the Nextcloud
+  storage.
+- Diagnosed and fixed WebDAV path mismatch (`admin` vs `admint`) and missing target
+  folder (`Odoo`).
+- Created `models/ir_attachment.py` in `sale_contract_puzzle`: overrides
+  `_enforce_meaningful_storage_filename` to move uploaded contract files into
+  `Odoo/{partner.name}/Contract/` on Nextcloud.
 - Updated prompt frontmatter state to `completed`.
