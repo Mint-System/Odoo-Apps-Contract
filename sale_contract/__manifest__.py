@@ -1,8 +1,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
-    "name": "Sale Puzzle",
+    "name": "Sale Contract",
     "summary": """
-        Contract management for Puzzle ICT.
+        Additional contract fields on sale order.
     """,
     "author": "Mint System GmbH",
     "website": "https://www.mint-system.ch/",
@@ -10,8 +10,10 @@
     "development_status": "Production/Stable",
     "version": "18.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["sale_start_end_dates", "sale_substate", "fs_folder_webdav"],
-    "data": [],
+    "depends": ["sale_start_end_dates", "sale_substate", "sale_order_type"],
+    "data": [
+        # "views/sale_order.xml"
+    ],
     "installable": True,
     "application": False,
     "auto_install": False,

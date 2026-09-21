@@ -1,1 +1,0 @@
-Contract management for Puzzle ICT.
