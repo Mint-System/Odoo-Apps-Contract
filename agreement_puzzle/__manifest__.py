@@ -11,7 +11,7 @@
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["agreement"],
-    "data": ["data/agreement_data.xml", "views/agreement.xml"],
+    "data": ["data/data.xml", "views/agreement_views.xml", "views/agreement_type_views.xml"],
     "installable": True,
     "application": False,
     "auto_install": False,

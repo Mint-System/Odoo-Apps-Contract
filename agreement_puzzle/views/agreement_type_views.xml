@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="agreement_puzzle_agreement_type_form" model="ir.ui.view">
+        <field name="name">agreement.type.form.inherit.puzzle</field>
+        <field name="model">agreement.type</field>
+        <field name="inherit_id" ref="agreement.agreement_type_form_view"/>
+        <field name="arch" type="xml">
+            <field name="domain" position="before">
+                <field name="code"/>
+            </field>
+        </field>
+    </record>
+</odoo>

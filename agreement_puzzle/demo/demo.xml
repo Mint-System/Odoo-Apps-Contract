@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <record id="${MODEL_NAME}_demo" model="$MODEL_DOT_NAME">
-        <field name="name">$MODEL_DESCRIPTION</field>
-        <field name="value">demo</field>
+<odoo noupdate="1">
+    <record id="agreement.market1" model="agreement">
+        <field name="agreement_type_id" ref="agreement_puzzle.agreement_type_framework"/>
+    </record>
+    <record id="agreement.market2" model="agreement">
+        <field name="agreement_type_id" ref="agreement_puzzle.agreement_type_individual"/>
+        <field name="parent_agreement_id" ref="agreement.market1"/>
     </record>
 </odoo>

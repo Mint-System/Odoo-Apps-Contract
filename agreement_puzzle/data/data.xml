@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<odoo>
-    <record id="$MODEL_NAME" model="$MODEL_DOT_NAME">
-        <field name="name">$MODEL_DESCRIPTION</field>
-        <field name="value">data</field>
+<odoo noupdate="1">
+    <record id="agreement_type_framework" model="agreement.type">
+        <field name="name">Framework Agreement</field>
+        <field name="code">framework</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="agreement_type_individual" model="agreement.type">
+        <field name="name">Individual Order</field>
+        <field name="code">individual</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="agreement_type_maintenance" model="agreement.type">
+        <field name="name">Maintenance Agreement</field>
+        <field name="code">maintenance</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="agreement_type_nda" model="agreement.type">
+        <field name="name">NDA</field>
+        <field name="code">nda</field>
+        <field name="domain">sale</field>
+    </record>
+    <record id="agreement_type_subcontractor" model="agreement.type">
+        <field name="name">Subcontractor Agreement</field>
+        <field name="code">subcontractor</field>
+        <field name="domain">sale</field>
     </record>
 </odoo>

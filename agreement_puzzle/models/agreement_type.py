@@ -2,12 +2,13 @@
 
 import logging
 
-from odoo import models
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
 
 
 class AgreementType(models.Model):
-    # _name = "agreement.type"
-    # _inherit = ["agreement.type"]
     _inherit = "agreement.type"
+
+    name = fields.Char(translate=True)
+    code = fields.Char()
