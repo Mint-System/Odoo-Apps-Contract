@@ -13,5 +13,5 @@ git clone git@github.com:Mint-System/Odoo-Apps-Contract.git ./addons/contract
 ## Available modules
 
 | Module | Summary |
-| ------ | ------- |
-|        |         |
+| --- | --- |
+| [agreement_puzzle](agreement_puzzle) | Additional fields on agreement for Puzzle. |
