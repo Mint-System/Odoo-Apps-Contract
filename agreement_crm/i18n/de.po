@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* agreement_crm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-13 07:07+0000\n"
+"PO-Revision-Date: 2026-10-13 07:07+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: agreement_crm
+#: model_terms:ir.ui.view,arch_db:agreement_crm.crm_lead_view_form
+msgid "<span class=\"o_stat_text\">Agreements</span>"
+msgstr "<span class=\"o_stat_text\">Vereinbarungen</span>"
+
+#. module: agreement_crm
+#: model:ir.model,name:agreement_crm.model_agreement
+msgid "Agreement"
+msgstr "Vereinbarung"
+
+#. module: agreement_crm
+#: model:ir.model.fields,field_description:agreement_crm.field_crm_lead__agreement_count
+msgid "Agreement Count"
+msgstr "Anzahl der Vereinbarungen"
+
+#. module: agreement_crm
+#: model:ir.model.fields,field_description:agreement_crm.field_crm_lead__agreement_ids
+msgid "Agreements"
+msgstr "Vereinbarungen"
+
+#. module: agreement_crm
+#: model_terms:ir.ui.view,arch_db:agreement_crm.crm_lead_view_form
+msgid "New Agreement"
+msgstr "Vereinbarung erstellen"
+
+#. module: agreement_crm
+#: model:ir.model.fields,field_description:agreement_crm.field_agreement__display_name
+#: model:ir.model.fields,field_description:agreement_crm.field_crm_lead__display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: agreement_crm
+#: model:ir.model.fields,field_description:agreement_crm.field_agreement__id
+#: model:ir.model.fields,field_description:agreement_crm.field_crm_lead__id
+msgid "ID"
+msgstr "ID"
+
+#. module: agreement_crm
+#: model:ir.model,name:agreement_crm.model_crm_lead
+#: model:ir.model.fields,field_description:agreement_crm.field_agreement__lead_id
+msgid "Lead"
+msgstr "Chance"
+
+#. module: agreement_crm
+#. odoo-python
+#: code:addons/agreement_crm/models/crm_lead.py:0
+msgid "Please set a customer before creating an agreement."
+msgstr "Bitte legen Sie einen Kunden fest, bevor Sie eine Vereinbarung erstellen."
+
+#. module: agreement_crm
+#: model:ir.model.fields,field_description:agreement_crm.field_agreement__user_id
+msgid "Salesperson"
+msgstr "Verkäufer"

@@ -14,4 +14,5 @@ git clone git@github.com:Mint-System/Odoo-Apps-Contract.git ./addons/contract
 
 | Module | Summary |
 | --- | --- |
+| [agreement_crm](agreement_crm) | Create agreements from leads. |
 | [agreement_puzzle](agreement_puzzle) | Additional fields on agreement for Puzzle. |

@@ -80,11 +80,6 @@ msgid "Parent Agreement"
 msgstr "Übergeordnete Vereinbarung"
 
 #. module: agreement_puzzle
-#: model:ir.model.fields,field_description:agreement_puzzle.field_agreement__user_id
-msgid "Responsible Person"
-msgstr "Verantwortliche Person"
-
-#. module: agreement_puzzle
 #: model:ir.model.fields,field_description:agreement_puzzle.field_agreement__risk
 #: model_terms:ir.ui.view,arch_db:agreement_puzzle.agreement_puzzle_agreement_form
 msgid "Risk"

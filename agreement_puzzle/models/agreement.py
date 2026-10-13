@@ -16,7 +16,6 @@ class Agreement(models.Model):
     cost_cap = fields.Monetary(currency_field="company_currency_id")
     chances = fields.Text()
     risk = fields.Text()
-    user_id = fields.Many2one("res.users", string="Responsible Person")
     termination_date = fields.Date()
     termination_reminder_date = fields.Date()
     type_code = fields.Char(

@@ -19,9 +19,6 @@
             <field name="agreement_type_id" position="after">
                 <field name="parent_agreement_id" invisible="type_code == 'framework'"/>
             </field>
-            <field name="domain" position="after">
-                <field name="user_id"/>
-            </field>
             <field name="end_date" position="before">
                 <field name="termination_reminder_date"/>
                 <field name="termination_date"/>

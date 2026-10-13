@@ -10,7 +10,7 @@
     "development_status": "Production/Stable",
     "version": "19.0.1.0.0",
     "license": "AGPL-3",
-    "depends": ["agreement"],
+    "depends": ["agreement", "agreement_crm"],
     "data": ["data/data.xml", "views/agreement_views.xml", "views/agreement_type_views.xml"],
     "installable": True,
     "application": False,
