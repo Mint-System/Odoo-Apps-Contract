@@ -1,17 +1,17 @@
-# Odoo Apps: Account Invoicing
+# Odoo Apps: Contract
 
-Collection of contract model related modules.
+Odoo modules extending the `contract` module.
 
 ## Usage
 
-Clone module into Odoo addon directory.
+Clone this repo into the Odoo addons directory.
 
 ```bash
-git clone git@github.com:mint-system/odoo-apps-contract.git ./addons/contract
+git clone git@github.com:Mint-System/Odoo-Apps-Contract.git ./addons/contract
 ```
 
 ## Available modules
 
 | Module | Summary |
 | --- | --- |
-| [account_followup_hide_communication](account_followup_hide_communication) |         Remove communication column from followup report. |
+| [contract_format_date_marker](contract_format_date_marker) |         Format date from contract markers in invoice line. |
