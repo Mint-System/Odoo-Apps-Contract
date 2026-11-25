@@ -14,5 +14,5 @@ git clone git@github.com:Mint-System/Odoo-Apps-Contract.git ./addons/contract
 
 | Module | Summary |
 | --- | --- |
-| [sale_contract](sale_contract) | Additional contract fields on sale order. |
-| [sale_contract_puzzle](sale_contract_puzzle) | Add fields to sale order contracts. |
+| [sale_contract](sale_contract) |         Additional contract fields on sale order. |
+| [sale_contract_puzzle](sale_contract_puzzle) |         Add fields to sale order contracts. |
