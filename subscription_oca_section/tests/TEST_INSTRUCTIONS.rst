@@ -1,0 +1,6 @@
+- Enable the module.
+- Edit or create a subsrciption.
+- Add note(s) and section(s) to the subscription.
+- Change sequence of production lines, notes and sections.
+- Create an invoice manually.
+- Notes and sections are copied to invoice in correct order. 
